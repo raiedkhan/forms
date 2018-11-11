@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signin</title>
+	<link rel="stylesheet" type="text/css" href="../Css Files/signin.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+</head>
+<body>
+	<div class="loginBox">
+		<form action="../index.html" method="post" onsubmit="return check();">
+			<img src="../Images/user.png" class="user">
+			<h2>Create an Account</h2>
+			<div class="input-box">
+				<i class="fas fa-user"></i>
+				<input type="text" name="" placeholder="Username"id="username" required="">
+			</div>
+			<div class="input-box">
+				<i class="fas fa-envelope"></i>
+				<input type="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required="" placeholder="Email">
+			</div>
+			<div class="input-box">
+				<i class="fas fa-phone"></i>
+				<input type="text" name="" placeholder="Contact-Number" pattern="[7-9]{1}[0-9]{9}" id="contact" required="Please Enter a valid number">
+			</div>
+			<div class="input-box">
+				<i class="fa fa-unlock" aria-hidden="true"></i>
+				<input type="password" name="" placeholder="Password" id="password" required="">
+			</div>
+			<div class="input-box">
+				<i class="fa fa-unlock" aria-hidden="true"></i>
+				<input type="password" name="" placeholder="Re-Enter Password" id="password1" required="">
+			</div>
+			<div class="input-box">
+				<input type="submit" name="" value="Create an Account">
+			</div>
+		</form>
+	</div>
+	<script>
+		 function check()
+		 {
+			var password = document.getElementById("password").value;
+			var password1 = document.getElementById("password1").value;
+			if(password1==(password))
+			{
+				return true;
+			}
+			else
+			{
+				alert("Passwords didn't match");
+				return false;
+			}
+		}  
+	</script>
+</body>
+</html>
